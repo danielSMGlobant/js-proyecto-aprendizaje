@@ -58,6 +58,10 @@ let = 'Proyecto Hail Marry' // Esto si es posible por que se esta actualizando e
 //  === Tipos de Variables ===
 
 /**
+ * * https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Variables
+ */
+
+/**
  * Números
  * Ya sea números enteros como 30 (también llamados enteros — "integer") o números decimales como 2.456 (también llamados números flotantes o de coma flotante — "number").
  */
@@ -144,6 +148,8 @@ const moneda = 'PEN' // A la constante siempre se debe iniciar con un valor al d
  *  multiplicacion
  * / división
  * % sobrante
+ *
+ * * https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Math
  */
 let num1 = 10
 let num2 = 50
@@ -189,7 +195,7 @@ z += y
 console.log('el nuevo valor de x es:' + x)
 console.log('el nuevo valor de z es:' + z)
 
-// Operadores de comparación
+// === Operadores de comparación ===
 
 /**
  * ===	Igual estricto (evalua el tipo de dato también) - Comprueba si los valores izquierdo y derecho son idénticos entre sí	5 === 2 + 4
@@ -247,3 +253,48 @@ switch (ahorroDinero) {
   default:
     break
 }
+
+// === Propiedades y métodos con cadenas STRING ===
+
+/**
+ * Consideremos que todo es un objeto.
+ * Por tal motivo una cadena STRING, se comporta como un objeto, el cual cuenta con su constructor, propiedades y métodos que podriamos usar
+ * * https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String
+ */
+
+// Longitud de una cadena - propiedad Length
+let cadena = 'apple pencil'
+console.log('Mi cadena tiene ' + cadena.length + ' caracteres') //Ojo el espacio lo considera como un caracter
+
+// Extraer un caracter en específico
+console.log('La primera letra de la palabra es', cadena[0]) // Como todo en computación se inicia desde 0 tomando como posición que es el primer caracter
+console.log('La ultima letra será: ' + cadena[cadena.length - 1])
+
+// Encontrar una subcadena y extraerla
+console.log(cadena.indexOf('pencil')) // Aqui nos indica en que posición comienza la subcadena consultada
+console.log(cadena.indexOf(' ')) // Si queremos determinar en que posición esta el espacio entre ambas palabras
+console.log(cadena.indexOf('mini')) // Esto dará un resultado -1 por que esa sub cadena no ha sido encontrada
+
+console.log(cadena.slice(0, 5)) // Si quiero extraer una parte de la cadena puedo indicar como el primer parametro es la posición del caracter en la que comenzar a extraer, y el segundo parámetro es la posición del caracter posterior al último a ser extraído.
+console.log(cadena.slice(6)) // Si se desea extraer todo lo que esta justo despues del valor inidicado se puede omitir el segundo parametro
+
+let posicionEspacio = cadena.indexOf(' ')
+console.log(cadena.slice(0, posicionEspacio)) // Otra forma de extraer el primera palabra
+console.log(cadena.slice(posicionEspacio + 1)) // Otra forma de extraer el segunda palabra
+
+// Cambiar todo a mayuscula o todo a miniscula
+console.log(cadena.toLocaleLowerCase()) // Método para cambiar todo a miniscula
+console.log(cadena.toUpperCase()) // Método para cambiar todo a MAYUSCULA
+
+// Cambiar o reemplazar una parte de una cadena
+/**
+ * En una cadena puedes reemplazar una subcadena por otra usando el método replace(). Esto funciona de manera muy simple a un nivel básico
+ * Toma dos parámetros — la cadena que deseas reemplazar, y la cadena con la que deseas reemplazarla.
+ */
+let cadenaNueva = cadena.replace('pencil', 'pencil USB C')
+console.log(cadenaNueva)
+
+/**
+ * TODO: Para practicar
+ * * https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Useful_string_methods
+ */
