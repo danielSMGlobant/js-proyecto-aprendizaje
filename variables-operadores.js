@@ -192,10 +192,58 @@ console.log('el nuevo valor de z es:' + z)
 // Operadores de comparación
 
 /**
- * ===	Igual estricto - Comprueba si los valores izquierdo y derecho son idénticos entre sí	5 === 2 + 4
+ * ===	Igual estricto (evalua el tipo de dato también) - Comprueba si los valores izquierdo y derecho son idénticos entre sí	5 === 2 + 4
  * !==	Igual no-estricto - Comprueba si los valores izquierdo y derecho no son idénticos entre sí	5 !== 2 + 3
  * <	Menor que	- Comprueba si el valor izquierdo es menor que el derecho.	10 < 6
  * >	Mayor que	- Comprueba si el valor izquierdo es mayor que el derecho.	10 > 20
  * <=	Menor o igual a	- Comprueba si el valor izquierdo es menor o igual que el derecho.	3 <= 2
  * >=	Mayor o igual a - Comprueba si el valor izquierdo es mayor o igual que el derecho.. 5 >= 4
  */
+
+// Estructuras de control if else switch
+
+let precioIpad10 = 2300
+let precioIpadMini = 2100
+let precioIpadAir5 = 3000
+let ahorroDinero = 2100
+let porcentajeBateria = 80
+let conectadoCargador = false
+
+if (porcentajeBateria === 100) {
+  console.log('Bateria totalmente cargada')
+} else {
+  console.log('Bateria cargando ...')
+}
+
+if (porcentajeBateria === 100 && conectadoCargador) {
+  console.log('Bateria totalmente cargada')
+} else if (porcentajeBateria < 100 && conectadoCargador) {
+  console.log('Bateria cargando ...')
+} else {
+  console.log('Necitas conectarlo al cargador')
+}
+
+if (porcentajeBateria === 100) {
+  console.log('Bateria totalmente cargada')
+} else if (porcentajeBateria > 10) {
+  console.log('Bateria en uso ...')
+} else {
+  console.log('Bateria descargada, porfavor conectar a cargador ...')
+}
+
+switch (ahorroDinero) {
+  case precioIpad10:
+    console.log('Puedes comprarte un Ipad 10')
+    break
+
+  case precioIpadMini:
+    console.log('Puedes comprarte un Ipad Mini')
+    break
+
+  case precioIpadAir5:
+    console.log('Puedes comprarte un Ipad Air')
+    break
+
+  default:
+    break
+}
