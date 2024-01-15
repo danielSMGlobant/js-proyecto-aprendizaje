@@ -1,11 +1,16 @@
 // Inicio de proyecto
 console.log('hola mundo')
 
-// 1. SINTAXIS BÁSICA
+// !=== Variables ===
 
-//  === Variables ===
+/**
+ * Una variable es un contenedor para un valor, como un número que podríamos usar
+ * en una suma, o una cadena que podríamos usar como parte de una oración.
+ * Pero una cosa especial acerca de las variables es que los valores que contienen pueden cambiar.
+ * * https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Variables
+ */
 
-// Declarar variables
+// * Declarar variables
 /**
  * Para los nombres de las variables e suele usar la convencion de camelCase
  * Deben ser nombres claros e intuitivos que describan su utilidad
@@ -14,11 +19,11 @@ console.log('hola mundo')
 var miNombre
 var miEdad
 
-// Iniciar variables
+// * Iniciar variables
 miEdad = 27
 miNombre = 'Daniel'
 
-// Iniciar y declarar variable
+// * Iniciar y declarar variable
 var estado = true
 
 // >> Vamos a mostrarlo <<
@@ -27,7 +32,7 @@ console.log(miNombre)
 console.log(estado)
 console.log('la edad de ' + miNombre + 'es ' + miEdad)
 
-// Diferencia entre var y let
+// * Diferencia entre var y let
 
 /**
  * Con var puedes iniciar una variable y luego intentar inicializarla, no genera error
@@ -55,14 +60,14 @@ let = 'Proyecto Hail Marry' // Esto si es posible por que se esta actualizando e
  * Por estas y otras razones, se recomienda utilizar let tanto como sea posible en tu código, en lugar de var
  */
 
-//  === Tipos de Variables ===
+//  !=== Tipos de Variables ===
 
 /**
  * * https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Variables
  */
 
 /**
- * Números
+ * * Números
  * Ya sea números enteros como 30 (también llamados enteros — "integer") o números decimales como 2.456 (también llamados números flotantes o de coma flotante — "number").
  */
 
@@ -76,21 +81,21 @@ console.log(
 )
 
 /**
- * Cadenas de caracteres o String
+ * * Cadenas de caracteres o String
  * Son piezas de texto
  */
 let peliculaFavorita = 'Harry Potter y el misterio del príncipe'
 console.log('Mi peli favorita es ' + peliculaFavorita)
 
 /**
- * Booleanos
+ * * Booleanos
  * son valores verdadero/falso — pueden tener dos valores, true o false. Estos, generalmente se utilizan para probar una condición
  */
 let estadoHabilitado = true
 console.log('Estado: ' + estadoHabilitado)
 
 /**
- * Arreglos
+ * * Arreglos
  * es un objeto único que contiene múltiples valores encerrados entre corchetes y separados por comas.
  */
 let distritosCircuitoPlayas = [
@@ -112,7 +117,7 @@ console.log(
 ) // puedes acceder a cada valor por su ubicación dentro del arreglo
 
 /**
- * Objeto
+ * * Objeto
  * es una estructura de código que modela un objeto de la vida real.
  */
 let autor = {
@@ -136,12 +141,12 @@ console.log('De este autor mi libro favorito es: ' + autor.libros[0]) //Para rec
 // Ojo para identificar que tipo de valor es puede usar lo siguiente typeof
 console.log('Descubre ... el tipo de valor es: ' + typeof peliculaFavorita)
 
-// Constantes
+// * Constantes
 // es un valor que, una vez declarado no se puede cambiar.
 const moneda = 'PEN' // A la constante siempre se debe iniciar con un valor al declararlo
 //  moneda = "USD" // La constante no puede variar luego
 
-//  === Operadores Aritmeticos ===
+//  !=== Operadores Aritmeticos ===
 /**
  * + adición
  * - sustracción
@@ -195,7 +200,7 @@ z += y
 console.log('el nuevo valor de x es:' + x)
 console.log('el nuevo valor de z es:' + z)
 
-// === Operadores de comparación ===
+// Operadores de comparación
 
 /**
  * ===	Igual estricto (evalua el tipo de dato también) - Comprueba si los valores izquierdo y derecho son idénticos entre sí	5 === 2 + 4
@@ -206,55 +211,7 @@ console.log('el nuevo valor de z es:' + z)
  * >=	Mayor o igual a - Comprueba si el valor izquierdo es mayor o igual que el derecho.. 5 >= 4
  */
 
-// Estructuras de control if else switch
-
-let precioIpad10 = 2300
-let precioIpadMini = 2100
-let precioIpadAir5 = 3000
-let ahorroDinero = 2100
-let porcentajeBateria = 80
-let conectadoCargador = false
-
-if (porcentajeBateria === 100) {
-  console.log('Bateria totalmente cargada')
-} else {
-  console.log('Bateria cargando ...')
-}
-
-if (porcentajeBateria === 100 && conectadoCargador) {
-  console.log('Bateria totalmente cargada')
-} else if (porcentajeBateria < 100 && conectadoCargador) {
-  console.log('Bateria cargando ...')
-} else {
-  console.log('Necitas conectarlo al cargador')
-}
-
-if (porcentajeBateria === 100) {
-  console.log('Bateria totalmente cargada')
-} else if (porcentajeBateria > 10) {
-  console.log('Bateria en uso ...')
-} else {
-  console.log('Bateria descargada, porfavor conectar a cargador ...')
-}
-
-switch (ahorroDinero) {
-  case precioIpad10:
-    console.log('Puedes comprarte un Ipad 10')
-    break
-
-  case precioIpadMini:
-    console.log('Puedes comprarte un Ipad Mini')
-    break
-
-  case precioIpadAir5:
-    console.log('Puedes comprarte un Ipad Air')
-    break
-
-  default:
-    break
-}
-
-// === Propiedades y métodos con cadenas STRING ===
+// !=== Propiedades y métodos con cadenas STRING ===
 
 /**
  * Consideremos que todo es un objeto.
